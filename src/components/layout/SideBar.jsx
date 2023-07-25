@@ -1,22 +1,22 @@
 import React from "react";
-import { Store} from "../../store/context/AppContext";
+import { Store } from "../../store/context/AppContext";
 import logolight from "../../assets/logo-light.svg";
 import logodark from "../../assets/logo-dark.svg";
 import NavLinks from "../../utils/NavLinks";
 import Settings from "../../utils/Settings";
 const SideBar = () => {
-  const { theme } = Store();
+  const { theme, openModal } = Store();
 
   return (
-    <section className="nav_desktop pt-6  w-80 h-full hidden fixed top-0  md:block ">
+    <section className="nav_desktop fixed  top-0 hidden h-full w-80 pt-6  md:block ">
       <aside className="">
         <img
           className="ml-8"
           src={theme ? logodark : logolight}
           alt="company logo"
         />
-        <NavLinks marginTop={'my-12'} />
-        <div className="flex mt-5 items-center px-8">
+        <NavLinks marginTop={"my-12"} />
+        <div className="mt-5 flex items-center px-8">
           <div>
             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -25,7 +25,12 @@ const SideBar = () => {
               />
             </svg>
           </div>
-          <p className="text-4 tracking-widest ml-3 text-[#635fc7] font-semibold">+ Create New Board</p>
+          <p
+            data-modal="newboard"
+            onClick={openModal}
+            className="text-4 ml-3 font-semibold tracking-widest text-[#635fc7]">
+            + Create New Board
+          </p>
         </div>
         <Settings />
       </aside>

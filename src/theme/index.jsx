@@ -54,6 +54,15 @@ body{
   background-color: ${({ theme }) => theme.nav};
 
  }
+ .board_modal{
+  background-color: ${({ theme }) => theme.nav};
+
+ }
+ .cancel_button{
+  background-color: ${({ theme }) => theme.mode};
+ }
+
+ 
 `;
 
 export { GlobalStyles, Themes };

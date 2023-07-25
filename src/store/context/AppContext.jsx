@@ -44,6 +44,9 @@ const AppContext = ({ children }) => {
   const filteredTask = (id) => {
     dispatch({ type: "filteredTask", payload: { id } });
   };
+  const addNewBoard = () => {
+    dispatch({ type: "addNewBoard" });
+  };
 
   return (
     <Context.Provider
@@ -56,6 +59,7 @@ const AppContext = ({ children }) => {
         DeleteBoard,
         changeLink,
         filteredTask,
+        addNewBoard,
       }}>
       {children}
     </Context.Provider>

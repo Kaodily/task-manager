@@ -5,7 +5,7 @@ export default {
     extend: {
       gridTemplateColumns: {
         2: "320px 1fr",
-        3: '1fr 1fr 1fr'
+        3: '300px 300px 300px'
       },
     },
   },

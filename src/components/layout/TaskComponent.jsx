@@ -1,8 +1,8 @@
 import React from "react";
-import { Store } from "../../store/context/AppContext";
+// import { Store } from "../../store/context/AppContext";
 
 const TaskComponent = ({ column }) => {
-  const { openModal } = Store();
+  // const { openModal } = Store();
   return (
     <div className="mt-3 grid grid-cols-3 gap-6 p-4">
       {column.map((item, index) => {
@@ -27,9 +27,9 @@ const TaskComponent = ({ column }) => {
                 );
                 return (
                   <div
-                    className="task mb-7 h-max w-[280px] rounded-md p-4 shadow-md hover:text-[#635fc7] "
+                    className="task mb-7 h-max w-[300px] md:w-[310px] rounded-md p-4 shadow-md hover:text-[#635fc7] "
                     key={index}>
-                    <p className="text-sm font-bold  tracking-widest">
+                    <p className="text-sm font-bold tracking-widest">
                       {title}
                     </p>
                     <p className="mt-2 text-xs font-bold tracking-widest  text-[#828fa3]">
